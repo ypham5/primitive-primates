@@ -1,0 +1,22 @@
+{
+  "name": "primitiveprimates",
+  "version": "1.0.0",
+  "description": "Primitive Primates - NFT project",
+  "scripts": {
+    "clean": "rm -rf node_modules .git .parcel-cache dist .DS_Store",
+    "static": "cp -rf ./src/static   dist",
+    "start": "npx parcel src/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^9.6.9",
+    "nanoid": "^3.2.0",
+    "parcel": "^2.2.1"
+  },
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.2.1",
+    "@parcel/transformer-webmanifest": "^2.2.1"
+  }
+}

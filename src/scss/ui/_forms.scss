@@ -1,0 +1,25 @@
+@use './../variants/colors' as *;
+
+%input{
+    background-color: transparent;
+    color: $zinc-50;
+    padding: .75rem 1rem;
+    border: solid 1px $stone-50;
+    border-radius: 3px;
+    box-shadow: 0 0 1px 1px  $stone-50;;
+    font-size: 1.125rem;
+    width:100%;
+}
+
+input{
+    @extend %input;
+}
+
+label{
+    font-size: 1rem;
+    color: $zinc-600;
+}
+
+ 
+
+ 

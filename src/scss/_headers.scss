@@ -1,0 +1,138 @@
+@use 'variants' as *;
+.nav-list {
+    display: none;
+}
+
+.content-page-app-bar{
+    padding: .75rem;
+    display: flex;
+    justify-content: space-between;
+
+    .menu {
+        padding: 1rem .5rem;
+    }
+
+    div{
+        gap:0.25rem;
+        display:flex;
+        justify-content: center;
+        img{
+            width:120px;
+        }
+
+    }
+}
+
+.page-header{
+    position: relative;
+    text-align: center;
+    color: $grey-900;
+    min-height: 400px;
+    background: radial-gradient(closest-side, transparent, rgba(0, 0, 0, 0.5)), url(../static/images/bg.png) top center/ cover no-repeat;
+    height: 70vh;
+    box-shadow: 0 0 6px 1px $grey-900;
+    h1{
+        font-size:2rem;
+        font-weight: 900;
+        text-transform:uppercase;
+        letter-spacing: 2px;
+    }
+
+    p {
+        text-transform:uppercase;
+        color: $grey-400;
+    }
+   
+}
+.banner {
+    position: absolute;
+    left: 0;
+    top: 15%;
+    z-index: 10;
+    img{
+       opacity: .3;
+       max-width: 280px; 
+    }
+
+    a{
+        color: transparent;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #fff;
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+        font-weight: 900; 
+        &:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+}
+.social-list {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 25px;
+  li{
+    padding: 1rem;
+    a{transition: all .2s ease-in-out;
+        :hover { transform: scale(1.2); }
+    }
+  }
+}
+
+/* hide your menu - create  */
+.sliding-nav {
+    position: absolute;
+    padding: 4rem 0;
+    left: -100vw;
+    top: 0;
+    transition: left 1s ease-in-out;
+    background: linear-gradient(#e0d5bf, #e4d9c3);
+    min-width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+
+/* show your menu by the js class and position helper properities  */
+.active-state .sliding-nav {
+    left: 0;
+    top: 0;
+	transition: left 1s ease-in-out;
+}
+
+@media(min-width:900px){
+    .page-header{
+        text-align: center;
+      
+        h1{
+            font-size:2.5rem;
+        }
+    } 
+    
+    .content-page-app-bar{
+        padding: 2rem;
+        div{
+            img{
+                width:200px;
+            }
+    
+        }
+
+        .nav-list{
+            display:flex;
+            align-items: center;
+            gap: 1rem;
+        
+            svg{
+                stroke: $orange;
+                width: 1rem;
+        
+                &:hover {
+                    stroke: $orange-10;
+                }
+            }
+        }
+    }
+}

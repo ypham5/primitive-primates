@@ -1,0 +1,30 @@
+@use './../variants/colors' as *;
+%button{
+    background-color: transparent;
+    padding: 0.5rem;
+    border:none;
+    border-radius: 3px;
+    outline:none;
+    color:$orange;
+}
+
+button{
+    @extend %button;
+}
+.button-small{
+    font-size:14px;
+}
+.submit{
+    @extend %button;
+    width:100%;
+   background-color: $sky-600;
+   box-shadow: none;
+   color:white;
+}
+
+.button-small{
+    @extend button;
+    font-size:14px;
+    padding:0.25rem 1rem;
+}
+
