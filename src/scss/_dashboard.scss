@@ -1,7 +1,7 @@
 @use './variants/colors' as *;
  main {
     background-color: #242E14;
-    min-height: 280px;
+    min-height: 300px;
     :after {
         content: "";
         background: url(../static/images/overlay.png) top center/ cover no-repeat;
@@ -23,7 +23,6 @@
     p {
         color: $zinc-50;
         margin: 2rem 0;
-        text-decoration: uppercase;
         line-height: 1.6;
         span {
             font-weight: 600;
@@ -71,5 +70,92 @@
                 width: 100%;
             }
         }
+    }
+    .copyright {
+        font-size: .875rem;
+        margin: 2rem 0 0;
+        text-align: center;
+    }
+
+ }
+
+ 
+ @media (min-width: 535px){
+    main {
+        div{
+            padding: 0 2rem 0 8rem;
+
+            p {
+                margin: 2rem 0;
+                max-width: 450px;
+                line-height: 2;
+            }
+        }
+    }
+ }
+
+ @media (min-width: 680px){
+    main {
+        img {
+            max-width: 320px;
+        }
+        .copyright {
+            margin-top: 3.5rem;
+        }
+    }
+ }
+
+ @media (min-width: 780px){
+    main {
+        div{
+            padding: 0 2rem 0 12rem;
+        }
+    }
+ }
+
+ @media (min-width: 900px){
+    main {
+        img {
+            max-width: 480px;
+            bottom: 0;
+            top: unset;
+        }
+        div{
+            padding: 0 2rem 0 30rem;
+        }
+
+    }
+ }
+
+ @media (min-width: 1300px){
+    main {
+        div{
+            padding: 0 2rem 0 40rem;
+            p {
+                font-size: 1.125rem;
+                max-width: 600px;
+            }
+            .cta-shop {
+                font-size: 1.5rem;
+            }
+        }
+
+    }
+ }
+
+
+ @media (min-width: 1600px){
+    main {
+        img {
+            max-width: 640px;
+        }
+        div{
+            padding: 0 2rem 0 48rem;
+            p {
+                font-size: 1.2875rem;
+                line-height: 2;
+            }
+        }
+
     }
  }

@@ -355,3 +355,11 @@
   text-align: left;
   background-color: #f8f8f8;
 }
+
+
+@media (min-width: 2400px){
+  body {
+    max-width: 2380px;
+    margin: 0 auto;
+  }
+}

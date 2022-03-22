@@ -31,39 +31,66 @@
           <img src="static/svg/branding/pp-logo.svg" alt="Primitive Primates logo">
         </a>
       </div>
-      <button id="toggle">
-        <svg class="open" width="36" viewBox="0 0 448 512">
-          <path fill="currentColor"
-            d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
-          </path>
-        </svg>
-        <svg class="close" width="36" viewBox="0 0 352 512">
-          <path fill="currentColor"
-            d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z">
-          </path>
-        </svg>
-      </button>
+      <div class="hamburger-menu">
+        <div class="hamburger"></div>
+      </div>
       <nav class="sliding-nav">
-        <ul class="nav-list">
-          <li><a href="#" class="nav-link">Missions</a></li>
-          <li><a href="#" class="nav-link">Mint</a></li>
-          <li><a href="#" class="nav-link comingsoon">Shop</a></li>
+        <ul class="navbar--items">
+          <li class="navbar--item"><a href="#">Missions</a></li>
+          <li class="navbar--item"><a href="#">Mint</a></li>
+          <li class="navbar--item"><a class="comingsoon" href="index.html">Shop</a></li>
+          <li class="speaker">
+            <!-- <img class="sound-off" src="static/svg/icons/volume-off-solid.svg" alt="speaker off">
+            <img class="sound-on" src="static/svg/icons/volume-high-solid.svg" alt="speaker on"> -->
+          </li>
+          <audio id="player">
+            <source src="https://audio.jukehost.co.uk/RtrTjdKYdXiVyJMbMQNoGbcOmyGhTofF" type="audio/mp3" />
+          </audio>
         </ul>
       </nav>
     </div>
     <ul class="social-list">
-      <li><a href="#opensea" class="social-link"><img src="static/svg/icons/open-sea.svg" alt="open sea icon logo"></a>
+      <li><a href="https://opensea.io/PrimitivePrimates" class="social-link"><img src="static/svg/icons/open-sea.svg"
+            alt="open sea icon logo"></a>
       </li>
-      <li><a href="#twitter" class="social-link"><img src="static/svg/icons/twitter.svg" alt="twitter icon logo"></a>
+      <li><a href="https://twitter.com/Primateprimativ" class="social-link"><img src="static/svg/icons/twitter.svg"
+            alt="twitter icon logo"></a>
       </li>
-      <li><a href="#instagram" class="social-link"><img src="static/svg/icons/instagram.svg"
-            alt="instagram icon logo"></a></li>
-      <li><a href="#discord" class="social-link"><img src="static/svg/icons/discord.svg" alt="discord icon logo"></a>
+      <li><a href="https://www.instagram.com/primitiveprimatesrebellion" class="social-link"><img
+            src="static/svg/icons/instagram.svg" alt="instagram icon logo"></a></li>
+      <li><a href="https://discord.gg/DXs4gNwD" class="social-link"><img src="static/svg/icons/discord.svg"
+            alt="discord icon logo"></a>
       </li>
     </ul>
+    <div class="monkey-animation">
+      <img class="ani" src="static/svg/animations/vines.svg" alt="Primitive Primates animations vines">
+      <div>
+        <img class="ani-1" src="static/svg/animations/monkey1.svg" alt="Primitive Primates animations monkey 1">
+        <img class="ani-2" src="static/svg/animations/monkey2.svg" alt="Primitive Primates animations monkey 2">
+        <img class="ani-3" src="static/svg/animations/monkey3.svg" alt="Primitive Primates animations monkey 3">
+      </div>
+    </div>
     <div class="banner">
-      <img src="static/svg/branding/pp-logo.svg" alt="Primitive Primates logo">
-      <a class="cta-join" href="#discord">JOIN.OUR.COMMUNITY</a>
+      <img class="branding-img" src="static/svg/branding/pp-logo.svg" alt="Primitive Primates logo">
+      <ul id="countdown">
+        <li id="days">
+          <div class="number">00</div>
+          <div class="label">Days</div>
+        </li>
+        <li id="hours">
+          <div class="number">00</div>
+          <div class="label">Hours</div>
+        </li>
+        <li id="minutes">
+          <div class="number">00</div>
+          <div class="label">Minutes</div>
+        </li>
+        <li id="seconds">
+          <div class="number">00</div>
+          <div class="label">Seconds</div>
+        </li>
+      </ul>
+      <a class="cta-join" href="https://discord.gg/DXs4gNwD">JOIN.OUR.COMMUNITY</a>
     </div>
   </header>
   <main class="page-content">
@@ -72,9 +99,16 @@
       <p><span>PRIMITIVE PRIMATES</span> is a creative rebellion of 1000 hand-draw unique baboon portrait collection by
         Unforgotten Kai artist for our community campaign that mental health advocate journey into multiple metaverse
         platforms. </p>
-      <a class="cta-shop" href="#opensea">GET A PRIMATE</a>
+      <a class="cta-shop" href="#openseacollectionlink">GET A PRIMATE</a>
     </div>
+    <p class="copyright">© 2022 Made by Dacreativesoul. All rights reserved.</p>
   </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"
+    integrity="sha512-0QbL0ph8Tc8g5bLhfVzSqxe9GERORsKhIn1IrpxDAgUsbBGz/V7iSav2zzW325XGd1OMLdL4UiqRJj702IeqnQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="js/main.js"></script>
 </body>
 
