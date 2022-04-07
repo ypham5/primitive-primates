@@ -12,7 +12,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "firebase": "^9.6.9",
     "nanoid": "^3.2.0",
     "parcel": "^2.2.1"
   },
