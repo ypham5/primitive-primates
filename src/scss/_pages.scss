@@ -1,0 +1,180 @@
+.roadmap-header {
+    background: #171717;
+}
+.roadmap-banner {
+    overflow: hidden;
+    top: 15%;
+}
+.content-holder {
+    height: 500px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    padding: 0 .5rem;
+    &::-webkit-scrollbar {
+        display: none
+      }
+      
+    li{
+        margin-bottom: 4rem;
+        .top-logo-text span {
+            font-size: 2rem;
+            font-weight: 900;
+            letter-spacing: 10px;
+            color: #e7e6e6;
+            text-transform: uppercase;
+        }
+        .bottom-text p {
+            font-size: .875rem;
+            color: #fefefe;
+            margin: .75rem auto;
+            max-width: 50ch;
+        }
+        .center-icon img {
+            opacity: 1;
+            margin: 1rem 0;
+        }
+    }
+}
+.roadmap-main img {
+    display: none;
+}
+
+
+// MINT PAGE
+.mint-header {
+    background: #a8c3b9;
+}
+
+.mint-banner {
+    color: #242E14;
+    .top-info {
+        span {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 6.875px;
+            &:before{
+                display: inline-block;
+                content: "";
+                width: 2rem; /* 10px */
+                border-top: .1rem solid #242E14;
+                transform: translateY(-.25rem);
+                margin-right: .5rem;
+            }
+        }
+        h3 {
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+    }
+    ul {
+        margin: 2rem;
+        border-top: 1px solid #e7e7e7;
+        li {
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            font-size: 1rem;
+            margin-top: 1.5rem;
+            p {
+                color: #fff;
+            }
+            span {
+                font-weight: 800; 
+                letter-spacing: 1px;
+                margin-right: 1rem;
+            }
+        }
+    }
+}
+
+@media(min-width:535px){
+    .roadmap-main img {
+        display: block;
+    }
+    .mint-banner {
+        .top-info {
+            span {
+                font-size: 1.5rem;
+            }
+            h3 {
+                font-size: 2.5rem;
+            }
+        }
+        ul {
+            margin: 2rem;
+            li {
+                font-size: 1.5rem;
+                margin-top: 2rem;
+                span {
+                    margin-right: 1.5rem;
+                }
+            }
+        }
+    }
+
+}
+
+@media (min-width: 820px) {
+    .mint-banner{
+        padding: 2rem 6rem 2rem 1rem;
+    }
+}
+@media(min-width:1200px) {
+    .bottom-hold {
+        display: flex;
+        align-items: flex-start;
+        .center-icon {
+            margin-right: 2rem;
+        }
+    }
+}
+
+@media(min-width:1300px) {
+    .content-holder {
+        li {
+            .top-logo-text span {
+                padding-left: 8rem;
+            }
+            text-align: left;
+        }
+    }
+    .bottom-hold {
+        margin-left: 8rem;
+        max-width: 800px;
+        .center-icon {
+            margin-right: 4rem;
+        }
+    }
+}
+
+@media (min-width: 1600px){
+    .content-holder {
+        li {
+            .top-logo-text span {
+                padding-left: 1rem;
+            }
+            text-align: left;
+            .bottom-text p {
+                font-size: 1rem;
+                max-width: 60ch;
+            }
+        }
+    }
+    .bottom-hold {
+        margin-left: 1rem;
+        max-width: 1000px;
+        .center-icon {
+            margin-right: 4rem;
+        }
+    }
+    .roadmap-banner {
+        width: 1000px;
+    }
+
+    .mint-banner{
+        padding: 6rem 0;
+    }
+    
+}

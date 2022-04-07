@@ -16,7 +16,7 @@ $(function(){
  * GLOBAL VARS
  * -------------------------- */
 // The date you want to count down to
-var targetDate = new Date("2022/04/04 00:00:00");   
+var targetDate = new Date("2022/04/24 00:00:00");   
 
 // Other date related variables
 var days;
@@ -128,39 +128,4 @@ $(document).on('mouseenter', '.speaker', function() {
   }
 });
 
-$(document).on('mouseleave', '.speaker', function() {
-  /* If the mouse stops hovering on the image (leaves the image) clear the timer, reset back to 0 */
-  if (mouseovertimer) {
-    window.clearTimeout(mouseovertimer);
-    mouseovertimer = null;
-  }
-});
 
-$(document).on('click touchend', '.speaker', function() {
-  /* Touchend is necessary for mobile devices, click alone won't work */
-  if (!$('.speaker').hasClass("speakerplay")) {
-    if (audiostatus == 'off') {
-      $('.speaker').addClass('speakerplay');
-      getaudio.load();
-      getaudio.play();
-      window.clearTimeout(mouseovertimer);
-      audiostatus = 'on';
-      return false;
-    } else if (audiostatus == 'on') {
-      $('.speaker').addClass('speakerplay');
-      getaudio.play()
-    }
-  } else if ($('.speaker').hasClass("speakerplay")) {
-    getaudio.pause();
-    $('.speaker').removeClass('speakerplay');
-    window.clearTimeout(mouseovertimer);
-    audiostatus = 'on';
-  }
-});
-
-$('#player').on('ended', function() {
-  $('.speaker').removeClass('speakerplay');
-  /*When the audio has finished playing, remove the class speakerplay*/
-  audiostatus = 'off';
-  /*Set the status back to off*/
-});
